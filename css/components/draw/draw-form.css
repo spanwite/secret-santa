@@ -1,0 +1,22 @@
+.draw-form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+}
+
+.draw-form button {
+	flex-grow: 1;
+}
+
+.draw-form__errors {
+	margin-top: -10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	color: hsl(0, 100%, 75%);
+	font-size: 12px;
+
+	&:empty {
+		display: none;
+	}
+}

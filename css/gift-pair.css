@@ -1,0 +1,9 @@
+@import './base/normalize.css';
+@import './base/fonts.css';
+@import './base/variables.css';
+
+@import './layout/globals.css';
+@import './pages/gift-pair.css';
+
+@import './components/app.css';
+@import './components/gift-pair-view.css';

@@ -1,0 +1,18 @@
+.app {
+	width: 100%;
+	max-width: 800px;
+}
+
+.app__section {
+	flex: 0 1 50%;
+}
+
+@media (max-width: 500px) {
+	.app__sections {
+		flex-direction: column;
+		width: 100%;
+	}
+	.app__section {
+		flex: 1 1 100%;
+	}
+}

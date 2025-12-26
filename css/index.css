@@ -1,0 +1,19 @@
+@import './base/normalize.css';
+@import './base/fonts.css';
+@import './base/variables.css';
+
+@import './layout/globals.css';
+@import './pages/index.css';
+
+@import './components/app.css';
+@import './components/button.css';
+@import './components/field.css';
+
+@import './components/participants/participants.css';
+@import './components/participants/participants-list.css';
+@import './components/participants/participants-info.css';
+@import './components/participants/participants-form.css';
+
+@import './components/draw/draw.css';
+@import './components/draw/draw-form.css';
+@import './components/draw/draw-list.css';

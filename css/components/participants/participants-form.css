@@ -1,0 +1,13 @@
+.participants-form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+}
+
+.participants-form__field {
+	width: 100%;
+}
+
+.participants-form__errors {
+	margin-bottom: -6px;
+}

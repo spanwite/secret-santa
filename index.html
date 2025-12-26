@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Тайный Санта</title>
+		<link rel="shortcut icon" href="./assets/favicon.png" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<script src="./js/utils/array.utils.js" type="module"></script>
+		<script src="./js/services/url-safe-encoding.service.js" type="module"></script>
+		<script src="./js/services/draw.service.js" type="module"></script>
+		<script src="./js/repositories/participants.repository.js" type="module"></script>
+		<script src="./js/components/participants-form.component.js" type="module"></script>
+		<script src="./js/components/participants-list.component.js" type="module"></script>
+		<script src="./js/components/participants-info.component.js" type="module"></script>
+		<script src="./js/components/draw-form.component.js" type="module"></script>
+		<script src="./js/components/draw-list.component.js" type="module"></script>
+		<script src="./js/index.js" type="module"></script>
+	</head>
+	<body>
+		<div class="app">
+			<h1 class="app__title">Тайный Санта</h1>
+			<div class="app__sections">
+				<section class="app__section participants">
+					<h2 class="participants__title">Добавить участника</h2>
+					<form
+						class="participants-form"
+						id="new-participant-form"
+						data-participants-form
+						novalidate
+					>
+						<div class="participants-form__field field">
+							<input
+								type="text"
+								class="field__input"
+								autocomplete="off"
+								id="new-participant-name-input"
+								name="name"
+								placeholder=" "
+								aria-errormessage="new-participant-name-errors"
+								required
+							/>
+							<label class="field__label" for="new-participant-name-input">
+								Имя участника
+							</label>
+							<span
+								class="field__errors participants-form__errors"
+								id="new-participant-name-errors"
+								data-participants-form-field-errors
+							></span>
+						</div>
+						<div class="participants-form__field field">
+							<textarea
+								class="field__input"
+								autocomplete="off"
+								id="new-participant-wishlist-input"
+								name="wishlist"
+								placeholder=" "
+							></textarea>
+							<label class="field__label" for="new-participant-wishlist-input">
+								Что желает получить
+							</label>
+						</div>
+						<div class="participants-form__field field">
+							<textarea
+								class="field__input"
+								autocomplete="off"
+								id="new-participant-anti-wishlist-input"
+								name="antiWishlist"
+								placeholder=" "
+							></textarea>
+							<label class="field__label" for="new-participant-anti-wishlist-input">
+								Что не желает получить
+							</label>
+						</div>
+						<button class="button" type="submit">Добавить</button>
+					</form>
+				</section>
+				<section class="app__section draw">
+					<h2 class="draw__title">Жеребьёвка</h2>
+					<div class="participants-info draw__participants-info">
+						<span class="participants-info__total">
+							Всего участников:
+							<span class="participants-info__value" data-participants-info-total>
+								0
+							</span>
+						</span>
+						<button
+							class="button_transparent participants-info__delete-button"
+							type="button"
+							data-participants-info-delete-button
+						>
+							Очистить
+						</button>
+					</div>
+					<form class="draw-form" id="draw-form" data-draw-form>
+						<button class="button" type="submit">Разыграть</button>
+						<span class="draw-form__errors" data-draw-form-errors></span>
+					</form>
+					<ul
+						class="participants-list draw__participants-list"
+						data-participants-list
+					></ul>
+					<div class="draw__empty-message"></div>
+					<ul class="draw__list" data-draw-list></ul>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

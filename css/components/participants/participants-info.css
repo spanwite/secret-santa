@@ -1,0 +1,13 @@
+.participants-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 600;
+}
+
+.participants-info__delete-button {
+	&:not(.is-visible) {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
