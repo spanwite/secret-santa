@@ -30,7 +30,7 @@ export class GiftPairViewComponent {
 	parseSearchParams() {
 		const searchParams = new URLSearchParams(location.search);
 		const decodeParam = (paramName) =>
-			this.urlSafeEncodingService.decode(searchParams.get(paramName));
+			this.urlSafeEncodingService.decode(searchParams.get(paramName) ?? '');
 
 		this.searchParams = {
 			from: searchParams.get('from'),
@@ -43,13 +43,24 @@ export class GiftPairViewComponent {
 	render() {
 		const { from, to, wishlist, antiWishlist } = this.searchParams;
 
-		this.elements.fromName.textContent = from;
-		this.elements.toName.textContent = to;
+		if (from) {
+			this.elements.fromName.textContent = from;
+		} else {
+			this.elements.fromName.parentElement.textContent = '<Имя отправителя не указано>.';
+		}
+
+		if (to) {
+			this.elements.toName.textContent = to;
+		} else {
+			this.elements.toName.parentElement.textContent = '<Имя получателя не указано>.';
+		}
+
 		if (wishlist) {
 			this.elements.wishlist.textContent = wishlist;
 		} else {
 			this.elements.wishlist.parentElement.textContent = '—';
 		}
+
 		if (antiWishlist) {
 			this.elements.antiWishlist.textContent = antiWishlist;
 		} else {
