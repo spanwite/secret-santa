@@ -1,0 +1,32 @@
+body {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	padding: 40px 16px;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: 'Rubik', sans-serif;
+}
+
+input,
+button,
+label,
+textarea {
+	transition-duration: var(--transition-duration);
+}
+
+:focus-visible {
+	outline: 2px dashed var(--color-text);
+	outline-offset: 2px;
+	transition-duration: 0s !important;
+}
+
+.app__title {
+	margin-bottom: 16px;
+}
+
+.app__link {
+	color: inherit;
+	text-decoration: none;
+}

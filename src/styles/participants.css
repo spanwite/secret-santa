@@ -1,0 +1,9 @@
+.participants {
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+}
+
+.participants__title {
+	margin-bottom: 6px;
+}

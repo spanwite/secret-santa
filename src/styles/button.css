@@ -1,0 +1,57 @@
+.button {
+	background-color: var(--color-accent);
+	border: none;
+	padding-block: 4px;
+	color: inherit;
+	border-radius: var(--border-radius);
+
+	&:hover {
+		background-color: var(--color-text);
+		color: var(--color-accent);
+	}
+
+	&:active {
+		scale: 1.05;
+	}
+}
+
+.button_transparent {
+	background-color: transparent;
+	border: none;
+	color: inherit;
+
+	&:hover {
+		color: color-mix(in hsl, currentColor, black 24%);
+	}
+}
+
+:where(.button_square) {
+	width: 36px;
+	height: 36px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	border-radius: var(--border-radius);
+	background-color: transparent;
+	border: none;
+	color: var(--color-bg);
+
+	&:hover {
+		background-color: var(--color-bg);
+		color: var(--color-text);
+	}
+
+	&:active {
+		scale: 1.05;
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	* {
+		pointer-events: none;
+	}
+}

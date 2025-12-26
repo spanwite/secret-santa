@@ -1,0 +1,18 @@
+.gift-pairs-view {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+}
+
+.gift-pairs-view__group {
+	border-radius: var(--border-radius);
+	padding: 6px 8px;
+}
+
+.gift-pairs-view__group--wishlist {
+	background-color: var(--color-surface-3);
+}
+
+.gift-pairs-view__group--anti-wishlist {
+	background-color: var(--color-surface-10);
+}

@@ -1,0 +1,16 @@
+:root {
+	--color-bg: hsl(132 29% 31%);
+	--color-text: hsl(43 57% 88%);
+	--color-accent: hsl(359 47% 51%);
+
+	--color-surface-1: hsl(98 32% 45%);
+	--color-surface-2: hsl(78 51% 56%);
+	--color-surface-3: hsl(81 47% 51%);
+	--color-surface-10: hsl(39 47% 51%);
+
+	--border: 1px solid var(--color-surface-2);
+	--border-radius: 8px;
+	--input-height: 40px;
+
+	--transition-duration: 0.2s;
+}

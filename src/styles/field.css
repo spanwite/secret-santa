@@ -1,0 +1,54 @@
+.field {
+	position: relative;
+	color: var(--color-bg);
+
+	&:has(.field__input:not(:placeholder-shown)) .field__label {
+		translate: -1.4em -1.8em;
+		font-size: 12px;
+		color: var(--color-text) !important;
+	}
+}
+
+.field__input {
+	width: 100%;
+	padding-inline: 16px;
+	padding-block: 6px;
+	background-color: var(--color-surface-2);
+	border-radius: var(--border-radius);
+	border: none;
+	color: var(--color-bg);
+
+	&:focus,
+	&:hover {
+		background-color: color-mix(in hsl, var(--color-surface-2), black 10%);
+		outline: none;
+	}
+}
+
+.field__label {
+	position: absolute;
+	left: 17px;
+	line-height: 1;
+	top: 0.62em;
+	pointer-events: none;
+}
+
+.field:has(textarea) {
+	.field__input {
+		min-height: 140px;
+		resize: none;
+	}
+}
+
+.field__errors:empty {
+	display: none;
+}
+
+.field__errors {
+	margin-top: 2px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	color: hsl(0, 100%, 75%);
+	font-size: 12px;
+}

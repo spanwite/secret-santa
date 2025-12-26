@@ -1,0 +1,16 @@
+@import './styles/_/normalize.css';
+@import './styles/_/fonts.css';
+@import './styles/_/variables.css';
+
+@import './styles/globals.css';
+@import './styles/secret-santa.css';
+@import './styles/button.css';
+@import './styles/field.css';
+@import './styles/gift-pairs.css';
+@import './styles/participants.css';
+
+@import './components/participants-list/participants-list.css';
+@import './components/participants-info/participants-info.css';
+@import './components/participants-form/participants-form.css';
+@import './components/gift-pairs-form/gift-pairs-form.css';
+@import './components/gift-pairs-list/gift-pairs-list.css';
