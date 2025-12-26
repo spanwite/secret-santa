@@ -57,13 +57,13 @@ export class DrawService {
 			toEncoded[key] = this.urlSafeEncodingService.encode(toEncoded[key]);
 		}
 
-		const pageFile = 'gift-pair.html';
+		const page = 'gift-pair.html';
 		const searchParams = new URLSearchParams({
 			from: from.name,
 			to: toEncoded.name,
 			wishlist: toEncoded.wishlist,
 			antiWishlist: toEncoded.antiWishlist,
 		});
-		return `${location.origin}/${pageFile}?${searchParams}`;
+		return `${location.origin}${location.pathname}${page}?${searchParams}`;
 	}
 }
