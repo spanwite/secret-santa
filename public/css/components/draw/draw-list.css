@@ -1,0 +1,17 @@
+.draw-list-item {
+	--itemHeight: 36px;
+
+	display: flex;
+	color: var(--color-bg);
+	background-color: var(--color-surface-2);
+	justify-content: space-between;
+	border-radius: var(--border-radius);
+	align-items: center;
+	height: var(--itemHeight);
+	padding-left: 12px;
+}
+
+.draw-list-item__icon {
+	width: 21px;
+	height: 21px;
+}

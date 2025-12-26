@@ -1,0 +1,32 @@
+.draw {
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+
+	&:has(.draw__list:not(:empty)) .participants-list {
+		display: none;
+	}
+}
+
+.draw__empty-message {
+	margin-top: 2px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	color: hsl(0, 100%, 75%);
+	font-size: 12px;
+
+	&:empty {
+		display: none;
+	}
+}
+
+.draw__participants-info {
+	font-weight: bold;
+}
+
+.draw__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}

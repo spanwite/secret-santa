@@ -1,8 +1,0 @@
-@import './styles/_/normalize.css';
-@import './styles/_/fonts.css';
-@import './styles/_/variables.css';
-
-@import './styles/globals.css';
-@import './styles/secret-santa.css';
-
-@import './components/gift-pairs-view/gift-pairs-view.css';

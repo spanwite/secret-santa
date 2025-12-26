@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Тайный Санта</title>
+		<link rel="shortcut icon" href="./assets/favicon.png" />
+		<link rel="stylesheet" href="./css/gift-pair.css" />
+		<script type="module" src="./js/components/gift-pair-view.component.js"></script>
+		<script type="module" src="./js/services/url-safe-encoding.service.js"></script>
+		<script type="module" src="./js/gift-pair.js"></script>
+	</head>
+	<body>
+		<div class="app">
+			<h1 class="app__title"><a href="/" class="app__link">Тайный Санта</a></h1>
+			<div class="app__sections">
+				<section class="app__section gift-pair-view" data-gift-pair-view>
+					<h2 class="gift-pair-view__title">Результат Жеребьёвки</h2>
+					<div>
+						<div class="gift-pair-view__label">
+							Здравствуйте,
+							<strong
+								class="gift-pair-view__name"
+								data-gift-pair-view-from-name
+							></strong
+							>!
+						</div>
+						<div class="gift-pair-view__label">
+							Вы дарите подарок для:
+							<strong
+								class="gift-pair-view__name"
+								data-gift-pair-view-to-name
+							></strong
+							>.
+						</div>
+					</div>
+					<div class="gift-pair-view__group gift-pair-view__group--wishlist">
+						<div class="gift-pair-view__label">Что <em>хочет</em> получить:</div>
+						<p class="gift-pair-view__text">
+							<q data-gift-pair-view-wishlist></q>
+						</p>
+					</div>
+					<div class="gift-pair-view__group gift-pair-view__group--anti-wishlist">
+						<div class="gift-pair-view__label">Что <em>не хочет</em> получить:</div>
+						<p class="gift-pair-view__text">
+							<q data-gift-pair-view-anti-wishlist></q>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
